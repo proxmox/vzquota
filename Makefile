@@ -39,3 +39,7 @@ distclean: clean
 clean:
 	rm -rf *~ debian/*~ ${SRCDIR} ${PACKAGE}_*.deb ${PACKAGE}_*.changes
 
+.PHONY: dinstall
+dinstall: ${DEB}
+	dpkg -i ${DEB}
+
