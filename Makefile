@@ -22,5 +22,20 @@ ${DEB}: ${SRC}
 	lintian ${DEB}
 
 
+.PHONY: upload
+upload: ${DEB}
+	umount /pve/${RELEASE}; mount /pve/${RELEASE} -o rw 
+	mkdir -p /pve/${RELEASE}/extra
+	rm -f /pve/${RELEASE}/extra/${PACKAGE}_*.deb
+	rm -f /pve/${RELEASE}/extra/Packages*
+	cp ${DEB} /pve/${RELEASE}/extra
+	cd /pve/${RELEASE}/extra; dpkg-scanpackages . /dev/null > Packages; gzip -9c Packages > Packages.gz
+	umount /pve/${RELEASE}; mount /pve/${RELEASE} -o ro
+
+.PHONY: distclean
+distclean: clean
+
+.PHONY: clean
 clean:
 	rm -rf *~ debian/*~ ${SRCDIR} ${PACKAGE}_*.deb ${PACKAGE}_*.changes
+
