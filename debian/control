@@ -1,0 +1,22 @@
+Source: vzquota
+Section: admin
+Priority: extra
+Maintainer: Proxmox Support Team <support@proxmox.com>
+Build-Depends: debhelper (>= 7.0.50~)
+Standards-Version: 3.8.4
+
+Package: vzquota
+Architecture: any
+Depends: ${shlibs:Depends}, ${misc:Depends}
+Description: server virtualization solution - quota tools
+ OpenVZ is an Operating System-level server virtualization solution, built
+ on Linux. OpenVZ creates isolated, secure virtual private servers on a single
+ physical server enabling better server utilization and ensuring that
+ applications do not conflict. Each VPS performs and executes exactly like a
+ stand-alone server; VPSs can be rebooted independently and have root access,
+ users, IP addresses, memory, processes, files, applications, system libraries
+ and configuration files.
+ .
+ This package contain the control tool to manipulate quota for virtual servers.
+ .
+ Homepage: http://www.openvz.org/

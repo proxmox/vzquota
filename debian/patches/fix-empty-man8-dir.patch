@@ -1,0 +1,12 @@
+Index: new/src/Makefile
+===================================================================
+--- new.orig/src/Makefile	2012-09-28 08:21:35.000000000 +0200
++++ new/src/Makefile	2012-09-28 08:21:45.000000000 +0200
+@@ -53,7 +53,6 @@
+ 
+ install: $(PROGS)
+ 	$(INSTALL) -d $(DESTDIR)$(SBINDIR)
+-	$(INSTALL) -d $(DESTDIR)$(MANDIR)/man8
+ 	$(INSTALL) -d $(DESTDIR)$(VARDIR)/vzquota
+ 	for file in $(PROGS); do \
+ 		$(INSTALL) -m 755 $$file $(DESTDIR)$(SBINDIR)/$$file; \

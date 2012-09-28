@@ -1,0 +1,13 @@
+Index: new/src/Makefile
+===================================================================
+--- new.orig/src/Makefile	2012-09-28 08:13:13.000000000 +0200
++++ new/src/Makefile	2012-09-28 08:13:35.000000000 +0200
+@@ -18,7 +18,7 @@
+ INSTALL = install
+ PREFIX = /usr
+ SBINDIR = ${PREFIX}/sbin
+-VARDIR = /var
++VARDIR = /var/lib
+ 
+ #DEBUG = -D_DEBUG -g3 -ggdb3 -p -pg
+ CFLAGS += -pipe -I../include -std=gnu99 \
