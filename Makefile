@@ -1,4 +1,4 @@
-RELEASE=2.2
+RELEASE=3.0
 
 # wget http://download.openvz.org/utils/vzquota/3.1/src/vzquota-3.1.tar.bz2
 
