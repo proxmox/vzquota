@@ -1,3 +1,9 @@
+vzquota (3.1-2) unstable; urgency=low
+
+  * increase version for wheezy
+
+ -- Proxmox Support Team <support@proxmox.com>  Wed, 27 Mar 2013 10:37:13 +0100
+
 vzquota (3.1-1) unstable; urgency=low
 
   * updated package for PVE 
